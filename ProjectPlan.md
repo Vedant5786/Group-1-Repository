@@ -6,7 +6,7 @@
 ## 1. Overview
 Economic fluctuations which play into play consumer confidence, purchasing behavior and total financial health. At times of high unemployment we see individual consumers reduce what they spend on non-essential items, put off large purchases and in fact turn to basic products. In contrast when employment is strong we see spending go up which in turn stimulates business growth and GDP growth. That which plays into the relationship between unemployment and consumer spending is what economists, policymakers and businesses pay attention to as they try to predict market trends and develop proper economic policies.
 
-This project we set out to do is to put a number to and present how changes in unemployment rates play out in terms of consumer spending over time and across geographies. We will be working with two different public data sets  the Federal Reserve Economic Data (FRED) API and a Kaggle U.S. Consumer Spending dataset to present a unified picture of the labor market and household expenditure. The integration of these data sets will also allow us to look at trends over time and at the same which regions are affected  for example we will look at how the COVID-19 pandemic or recessions played out in terms of their impact on spending as compared to instances of large scale unemployment.
+This project we set out to do is to put a number to and present how changes in unemployment rates play out in terms of consumer spending over time and across geographies. We will be working with two different public data sets the U.S. Unemployment Rate (UNRATE) API and a Personal Consumption Expenditures (PCE) to present a unified picture of the labor market and household expenditure. The integration of these data sets will also allow us to look at trends over time and at the same which regions are affected  for example we will look at how the COVID-19 pandemic or recessions played out in terms of their impact on spending as compared to instances of large scale unemployment.
 
 From the perspective of IS477 this project will present the full data life cycle which includes acquisition, integration, cleaning, storage and analysis at the same time we will focus on ethical issues related to data use, reproducibility of results, and open communication of our methods. At project end we aim to present interpretive visualizations and to report based on evidence which shows how variations in employment conditions play out in terms of consumer behavior.
 
@@ -28,7 +28,7 @@ Our research will focus on the following key research questions:
 
 This project is a collaborative effort between **Vedant Patel** and **Alex Vasilevich**. Both members will contribute to code development, documentation, and version control through the shared GitHub repository.
 
-| **Vedant Patel**: *Data Acquisition & Integration Lead* - Responsible for identifying, retrieving, and integrating data from the Federal Reserve Economic Data (FRED) API and Kaggle datasets. Vedant will handle data collection scripts, schema alignment, merging, and initial quality checks.
+| **Vedant Patel**: *Data Acquisition & Integration Lead* - Responsible for identifying, retrieving, and integrating data from the U.S. Unemployment Rate (UNRATE) and Personal Consumption Expenditures (PCE) datasets. Vedant will handle data collection scripts, schema alignment, merging, and initial quality checks.
 | **Alex Vasilevich**: *Analysis & Documentation Lead* - Responsible for exploratory data analysis, visualization, and results interpretation. Will prepare Markdown documentation, coordinate milestone deliverables, and ensure workflow reproducibility and proper citation of datasets.
 
 
@@ -48,7 +48,7 @@ Both datasets include a **monthly date variable**, which will serve as the prima
 | Step | Phase / Task | Description | Responsible Member(s) |
 |------|---------------|--------------|-----------------------|
 | **Step 1** | **Project Planning** | Finalize and submit the complete ProjectPlan.md document for Milestone 2. | Both |
-| **Step 2** | **Data Acquisition** | Retrieve datasets from the FRED API and Kaggle. Document sources, access parameters, and metadata for reproducibility. | Vedant |
+| **Step 2** | **Data Acquisition** | Retrieve datasets from the FRED. Document sources, access parameters, and metadata for reproducibility. | Vedant |
 | **Step 3** | **Data Cleaning and Integration** | Align the two datasets by time period, standardize variable names and formats, and merge them on matching date keys. | Vedant |
 | **Step 4** | **Exploratory Data Analysis (EDA)** | Generate descriptive statistics, identify trends, and visualize patterns between unemployment and spending behavior. | Alex Vasilevich |
 | **Step 5** | **Modeling and Trend Analysis** | Conduct regression or time-series modeling to quantify relationships between unemployment rates and spending. | Both |
