@@ -4,7 +4,7 @@
 
 **Team Members:** Vedant Patel and Alex Vasilevich
 
-**Date:** [Current Date]
+**Date:** 11/20/2025
 
 **GitHub Release Tag:** status-report
 
@@ -83,4 +83,5 @@ Plan Evolution:
 I handled getting our data and getting it ready for analysis. I wrote the data_acquisition.py script that downloads the unemployment and consumer spending data from the FRED API, and the data_cleaning_integration.py script that cleans up the data and combines both datasets. I also set up our project folder structure to keep everything organized.
 
 ### Contribution Summary by Alex Vasilevich
+
 I worked on exploring the data and creating our first visualizations. I wrote the eda.py script that loads our combined dataset and creates line charts and scatter plots to show the relationship between unemployment and spending. I also wrote most of this status report and have been keeping track of our deadlines to make sure we stay on schedule.
