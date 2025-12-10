@@ -1,0 +1,54 @@
+Level model: PCE ~ Unemployment
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                    pce   R-squared:                       0.052
+Model:                            OLS   Adj. R-squared:                  0.050
+Method:                 Least Squares   F-statistic:                     23.04
+Date:                Tue, 09 Dec 2025   Prob (F-statistic):           2.21e-06
+Time:                        19:41:59   Log-Likelihood:                -4102.3
+No. Observations:                 420   AIC:                             8209.
+Df Residuals:                     418   BIC:                             8217.
+Df Model:                           1                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [0.025      0.975]
+------------------------------------------------------------------------------
+const       1.304e+04    706.904     18.440      0.000    1.16e+04    1.44e+04
+unrate      -567.8427    118.297     -4.800      0.000    -800.374    -335.311
+==============================================================================
+Omnibus:                       69.328   Durbin-Watson:                   0.003
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):               24.135
+Skew:                           0.354   Prob(JB):                     5.74e-06
+Kurtosis:                       2.062   Cond. No.                         21.0
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+Lag model: PCE ~ Unemployment + Lag1(Unemployment)
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                    pce   R-squared:                       0.053
+Model:                            OLS   Adj. R-squared:                  0.048
+Method:                 Least Squares   F-statistic:                     11.59
+Date:                Tue, 09 Dec 2025   Prob (F-statistic):           1.26e-05
+Time:                        19:41:59   Log-Likelihood:                -4092.0
+No. Observations:                 419   AIC:                             8190.
+Df Residuals:                     416   BIC:                             8202.
+Df Model:                           2                                         
+Covariance Type:            nonrobust                                         
+===============================================================================
+                  coef    std err          t      P>|t|      [0.025      0.975]
+-------------------------------------------------------------------------------
+const        1.307e+04    715.895     18.257      0.000    1.17e+04    1.45e+04
+unrate       -534.3630    374.059     -1.429      0.154   -1269.644     200.918
+unrate_lag1   -36.9462    374.427     -0.099      0.921    -772.950     699.058
+==============================================================================
+Omnibus:                       70.045   Durbin-Watson:                   0.003
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):               24.101
+Skew:                           0.352   Prob(JB):                     5.84e-06
+Kurtosis:                       2.059   Cond. No.                         29.6
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.

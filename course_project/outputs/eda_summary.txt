@@ -1,0 +1,27 @@
+Rows: 420
+
+Date range: 1990-01-01 to 2024-12-01
+
+Correlation (Pearson) unrate vs pce: -0.2286
+
+Unrate describe:
+count    420.000000
+mean       5.714762
+std        1.748500
+min        3.400000
+25%        4.400000
+50%        5.400000
+75%        6.625000
+max       14.800000
+Name: unrate, dtype: float64
+
+PCE describe:
+count      420.000000
+mean      9790.030714
+std       4343.901242
+min       3728.200000
+25%       5990.500000
+50%       9728.950000
+75%      12541.375000
+max      20514.300000
+Name: pce, dtype: float64

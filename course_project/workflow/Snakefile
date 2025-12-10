@@ -1,0 +1,57 @@
+import os
+
+RAW_DIR = "data/raw"
+PROC_DIR = "data/processed"
+OUT_DIR = "outputs"
+
+os.makedirs(PROC_DIR, exist_ok=True)
+os.makedirs(OUT_DIR, exist_ok=True)
+
+rule all:
+    input:
+        f"{OUT_DIR}/eda_summary.txt",
+        f"{OUT_DIR}/trends_over_time.png",
+        f"{OUT_DIR}/correlation_scatter.png",
+        f"{OUT_DIR}/change_scatter.png",
+        f"{OUT_DIR}/modeling_summary.txt",
+        f"{OUT_DIR}/modeling_coefficients.csv",
+        f"{OUT_DIR}/predicted_vs_actual.png",
+        f"{OUT_DIR}/residuals_vs_fitted.png",
+
+rule acquire:
+    output:
+        unrate=f"{RAW_DIR}/unrate_raw.csv",
+        pce=f"{RAW_DIR}/pce_raw.csv",
+    shell:
+        "python scripts/data_acquisition.py --start-date 1990-01-01 --end-date 2024-12-31"
+
+rule clean_integrate:
+    input:
+        unrate=f"{RAW_DIR}/unrate_raw.csv",
+        pce=f"{RAW_DIR}/pce_raw.csv",
+    output:
+        merged=f"{PROC_DIR}/unemployment_pce_merged.csv",
+    shell:
+        "python scripts/data_cleaning_integration.py"
+
+rule eda:
+    input:
+        merged=f"{PROC_DIR}/unemployment_pce_merged.csv",
+    output:
+        f"{OUT_DIR}/trends_over_time.png",
+        f"{OUT_DIR}/correlation_scatter.png",
+        f"{OUT_DIR}/change_scatter.png",
+        f"{OUT_DIR}/eda_summary.txt",
+    shell:
+        "python scripts/eda.py"
+
+rule modeling:
+    input:
+        merged=f"{PROC_DIR}/unemployment_pce_merged.csv",
+    output:
+        f"{OUT_DIR}/modeling_summary.txt",
+        f"{OUT_DIR}/modeling_coefficients.csv",
+        f"{OUT_DIR}/predicted_vs_actual.png",
+        f"{OUT_DIR}/residuals_vs_fitted.png",
+    shell:
+        "python scripts/modeling.py"

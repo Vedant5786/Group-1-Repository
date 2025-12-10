@@ -1,0 +1,5 @@
+rows: 420
+date_min: 1990-01-01
+date_max: 2024-12-01
+missing_unrate: 0
+missing_pce: 0
